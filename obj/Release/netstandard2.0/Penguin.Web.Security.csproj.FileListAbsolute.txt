@@ -6,3 +6,4 @@ C:\Users\Loffr\Documents\GitHub\Penguin.Web.Security\obj\Release\netstandard2.0\
 C:\Users\Loffr\Documents\GitHub\Penguin.Web.Security\obj\Release\netstandard2.0\Penguin.Web.Security.AssemblyInfo.cs
 C:\Users\Loffr\Documents\GitHub\Penguin.Web.Security\obj\Release\netstandard2.0\Penguin.Web.Security.dll
 C:\Users\Loffr\Documents\GitHub\Penguin.Web.Security\obj\Release\netstandard2.0\Penguin.Web.Security.pdb
+C:\Users\Loffr\Documents\GitHub\Penguin.Web.Security\obj\Release\netstandard2.0\Penguin.Web.Security.csprojAssemblyReference.cache

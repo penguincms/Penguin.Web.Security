@@ -39,7 +39,7 @@ namespace Penguin.Cms.Web.Security.Attributes
         /// </summary>
         /// <param name="userSession">The user session to evaluate</param>
         /// <returns>The result of the evaluation</returns>
-        public RequiresRoleResult Evaluate(IUserSession userSession)
+        public RequiresRoleResult Evaluate(IUserSession<IUser> userSession)
         {
             if (userSession is null)
             {
@@ -75,7 +75,7 @@ namespace Penguin.Cms.Web.Security.Attributes
                 throw new ArgumentNullException(nameof(filterContext));
             }
 
-            IUserSession userSession = filterContext.HttpContext.RequestServices.GetService<IUserSession>();
+            IUserSession<IUser> userSession = filterContext.HttpContext.RequestServices.GetService<IUserSession<IUser>>();
 
             if (userSession is null)
             {

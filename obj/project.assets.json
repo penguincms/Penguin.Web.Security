@@ -513,7 +513,7 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Penguin.Security.Abstractions/1.0.3": {
+      "Penguin.Security.Abstractions/1.1.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Penguin.Security.Abstractions.dll": {}
@@ -2017,16 +2017,17 @@
         "tools/install.ps1"
       ]
     },
-    "Penguin.Security.Abstractions/1.0.3": {
-      "sha512": "myVW6cUKYqB6G4wuR0T0RbaVjyLau4RQFl4B3OyQlTeBAmeEzFudVbvM0adHxWIHEIwEACuWfkbbfmHjfSaNAg==",
+    "Penguin.Security.Abstractions/1.1.1": {
+      "sha512": "e3peWa2qppJlpRWCkcVx1QQUB+icfnlre5RAbtwxbYhQ+OJoP5RIyWGjF2ZH5AuyERVg1nfZURs2F6NY+qNQqQ==",
       "type": "package",
-      "path": "penguin.security.abstractions/1.0.3",
+      "path": "penguin.security.abstractions/1.1.1",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "License.txt",
         "lib/netstandard2.0/Comments.xml",
         "lib/netstandard2.0/Penguin.Security.Abstractions.dll",
-        "penguin.security.abstractions.1.0.3.nupkg.sha512",
+        "penguin.security.abstractions.1.1.1.nupkg.sha512",
         "penguin.security.abstractions.nuspec"
       ]
     },
@@ -4392,7 +4393,7 @@
       "Microsoft.AspNetCore.Mvc.Core >= 2.2.5",
       "Microsoft.CodeAnalysis.FxCopAnalyzers >= 2.9.4",
       "NETStandard.Library >= 2.0.3",
-      "Penguin.Security.Abstractions >= 1.0.3"
+      "Penguin.Security.Abstractions >= 1.1.1"
     ]
   },
   "packageFolders": {
@@ -4400,7 +4401,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.1",
+    "version": "1.0.3",
     "restore": {
       "projectUniqueName": "C:\\Users\\Loffr\\Documents\\GitHub\\Penguin.Web.Security\\Penguin.Web.Security.csproj",
       "projectName": "Penguin.Web.Security",
@@ -4455,7 +4456,7 @@
           },
           "Penguin.Security.Abstractions": {
             "target": "Package",
-            "version": "[1.0.3, )"
+            "version": "[1.1.1, )"
           }
         },
         "imports": [

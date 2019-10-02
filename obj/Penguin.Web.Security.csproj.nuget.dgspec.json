@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\Loffr\\Documents\\GitHub\\Penguin.Web.Security\\Penguin.Web.Security.csproj": {
-      "version": "1.0.1",
+      "version": "1.0.3",
       "restore": {
         "projectUniqueName": "C:\\Users\\Loffr\\Documents\\GitHub\\Penguin.Web.Security\\Penguin.Web.Security.csproj",
         "projectName": "Penguin.Web.Security",
@@ -60,7 +60,7 @@
             },
             "Penguin.Security.Abstractions": {
               "target": "Package",
-              "version": "[1.0.3, )"
+              "version": "[1.1.1, )"
             }
           },
           "imports": [

@@ -25,7 +25,7 @@ namespace Penguin.Cms.Web.Security.Attributes
                 throw new ArgumentNullException(nameof(filterContext));
             }
 
-            IUserSession userSession = filterContext.HttpContext.RequestServices.GetService<IUserSession>();
+            IUserSession<IUser> userSession = filterContext.HttpContext.RequestServices.GetService<IUserSession<IUser>>();
 
             if (userSession is null)
             {
