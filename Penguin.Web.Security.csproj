@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageProjectUrl>https://github.com/penguincms/Penguin.Web.Security</PackageProjectUrl>
-    <Version>1.0.3</Version>
+    <Version>1.1.0</Version>
     <Description>Web attributes leveraging abstract security interfaces intended on being used to DI security providers into controllers</Description>
 
   </PropertyGroup>
@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
-    <PackageReference Include="Penguin.Security.Abstractions" Version="1.1.1" />
+    <PackageReference Include="Penguin.Security.Abstractions" Version="1.1.4" />
   </ItemGroup>
 
 </Project>

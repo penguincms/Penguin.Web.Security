@@ -7,12 +7,12 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "Penguin.Web.Security/1.0.3": {
+      "Penguin.Web.Security/1.1.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.CodeAnalysis.FxCopAnalyzers": "2.9.4",
           "NETStandard.Library": "2.0.3",
-          "Penguin.Security.Abstractions": "1.1.1"
+          "Penguin.Security.Abstractions": "1.1.4"
         },
         "runtime": {
           "Penguin.Web.Security.dll": {}
@@ -449,11 +449,11 @@
           }
         }
       },
-      "Penguin.Security.Abstractions/1.1.1": {
+      "Penguin.Security.Abstractions/1.1.4": {
         "runtime": {
           "lib/netstandard2.0/Penguin.Security.Abstractions.dll": {
-            "assemblyVersion": "1.1.1.0",
-            "fileVersion": "1.1.1.0"
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.0"
           }
         }
       },
@@ -928,7 +928,7 @@
     }
   },
   "libraries": {
-    "Penguin.Web.Security/1.0.3": {
+    "Penguin.Web.Security/1.1.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1199,12 +1199,12 @@
       "path": "newtonsoft.json/9.0.1",
       "hashPath": "newtonsoft.json.9.0.1.nupkg.sha512"
     },
-    "Penguin.Security.Abstractions/1.1.1": {
+    "Penguin.Security.Abstractions/1.1.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-e3peWa2qppJlpRWCkcVx1QQUB+icfnlre5RAbtwxbYhQ+OJoP5RIyWGjF2ZH5AuyERVg1nfZURs2F6NY+qNQqQ==",
-      "path": "penguin.security.abstractions/1.1.1",
-      "hashPath": "penguin.security.abstractions.1.1.1.nupkg.sha512"
+      "sha512": "sha512-i8AEwO8rsmewEkN/tu7tIBOtsS8ZdJaI+eKIi7MByyrrEEG4357Z3lAxuERY/tyM/51Yg+CqUT5uOMvk+ruSzg==",
+      "path": "penguin.security.abstractions/1.1.4",
+      "hashPath": "penguin.security.abstractions.1.1.4.nupkg.sha512"
     },
     "runtime.native.System/4.0.0": {
       "type": "package",

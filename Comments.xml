@@ -31,7 +31,7 @@
             </summary>
             <param name="roleNames"></param>
         </member>
-        <member name="M:Penguin.Cms.Web.Security.Attributes.RequiresRoleAttribute.Evaluate(Penguin.Security.Abstractions.Interfaces.IUserSession{Penguin.Security.Abstractions.Interfaces.IUser})">
+        <member name="M:Penguin.Cms.Web.Security.Attributes.RequiresRoleAttribute.Evaluate(Penguin.Security.Abstractions.Interfaces.IUserSession)">
             <summary>
             Evaluates the user session against the roles provided at construction
             </summary>

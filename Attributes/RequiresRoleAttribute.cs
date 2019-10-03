@@ -39,12 +39,15 @@ namespace Penguin.Cms.Web.Security.Attributes
         /// </summary>
         /// <param name="userSession">The user session to evaluate</param>
         /// <returns>The result of the evaluation</returns>
-        public RequiresRoleResult Evaluate(IUserSession<IUser> userSession)
+        public RequiresRoleResult Evaluate(IUserSession userSession)
         {
             if (userSession is null)
             {
                 throw new System.ArgumentNullException(nameof(userSession));
             }
+
+            IHasGroupsAndRoles loggedInUser = userSession.LoggedInUser;
+
 
             if (userSession.IsLocalConnection)
             {
@@ -54,7 +57,7 @@ namespace Penguin.Cms.Web.Security.Attributes
             {
                 return RequiresRoleResult.Login;
             }
-            else if (!this.AllowedRoles.Any(r => userSession.LoggedInUser.HasRole(r)) && !userSession.LoggedInUser.HasRole(RoleNames.SysAdmin))
+            else if (!this.AllowedRoles.Any(r => loggedInUser.HasRole(r)) && !loggedInUser.HasRole(RoleNames.SysAdmin))
             {
                 return RequiresRoleResult.Unauthorized;
             }
@@ -75,7 +78,7 @@ namespace Penguin.Cms.Web.Security.Attributes
                 throw new ArgumentNullException(nameof(filterContext));
             }
 
-            IUserSession<IUser> userSession = filterContext.HttpContext.RequestServices.GetService<IUserSession<IUser>>();
+            IUserSession userSession = filterContext.HttpContext.RequestServices.GetService<IUserSession>();
 
             if (userSession is null)
             {
