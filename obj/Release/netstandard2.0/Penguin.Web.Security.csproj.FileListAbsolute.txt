@@ -1,9 +1,0 @@
-C:\Users\Loffr\Documents\GitHub\Penguin.Web.Security\bin\Release\netstandard2.0\Penguin.Web.Security.deps.json
-C:\Users\Loffr\Documents\GitHub\Penguin.Web.Security\bin\Release\netstandard2.0\Penguin.Web.Security.dll
-C:\Users\Loffr\Documents\GitHub\Penguin.Web.Security\bin\Release\netstandard2.0\Penguin.Web.Security.pdb
-C:\Users\Loffr\Documents\GitHub\Penguin.Web.Security\bin\Release\netstandard2.0\Comments.xml
-C:\Users\Loffr\Documents\GitHub\Penguin.Web.Security\obj\Release\netstandard2.0\Penguin.Web.Security.AssemblyInfoInputs.cache
-C:\Users\Loffr\Documents\GitHub\Penguin.Web.Security\obj\Release\netstandard2.0\Penguin.Web.Security.AssemblyInfo.cs
-C:\Users\Loffr\Documents\GitHub\Penguin.Web.Security\obj\Release\netstandard2.0\Penguin.Web.Security.dll
-C:\Users\Loffr\Documents\GitHub\Penguin.Web.Security\obj\Release\netstandard2.0\Penguin.Web.Security.pdb
-C:\Users\Loffr\Documents\GitHub\Penguin.Web.Security\obj\Release\netstandard2.0\Penguin.Web.Security.csprojAssemblyReference.cache
