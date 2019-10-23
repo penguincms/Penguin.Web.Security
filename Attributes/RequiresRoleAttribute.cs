@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
-using Penguin.Cms.Web.Security.Attributes.Results;
+using Microsoft.Extensions.DependencyInjection;
+using Penguin.Security.Abstractions.Constants;
+using Penguin.Security.Abstractions.Exceptions;
+using Penguin.Security.Abstractions.Extensions;
+using Penguin.Security.Abstractions.Interfaces;
+using Penguin.Web.Security.Results;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Microsoft.Extensions.DependencyInjection;
-using Penguin.Security.Abstractions.Interfaces;
-using Penguin.Security.Abstractions.Exceptions;
-using Penguin.Security.Abstractions.Extensions;
-using Penguin.Security.Abstractions.Constants;
 
-namespace Penguin.Cms.Web.Security.Attributes
+namespace Penguin.Web.Security.Attributes
 {
     /// <summary>
     /// Used to denote that a Controller Action should require the session user to have any role matching the provided in order to access it
@@ -47,7 +47,6 @@ namespace Penguin.Cms.Web.Security.Attributes
             }
 
             IHasGroupsAndRoles loggedInUser = userSession.LoggedInUser;
-
 
             if (userSession.IsLocalConnection)
             {

@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
-using System;
 using Microsoft.Extensions.DependencyInjection;
-using Penguin.Security.Abstractions.Interfaces;
 using Penguin.Security.Abstractions.Exceptions;
+using Penguin.Security.Abstractions.Interfaces;
+using System;
 
-namespace Penguin.Cms.Web.Security.Attributes
+namespace Penguin.Web.Security.Attributes
 {
     /// <summary>
     /// Requires an active logged in user session to access the controller action
