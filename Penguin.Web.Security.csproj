@@ -7,6 +7,7 @@
     <Description>Web attributes leveraging abstract security interfaces intended on being used to DI security providers into controllers</Description>
     <AssemblyName>Penguin.Web.Security</AssemblyName>
     <RootNamespace>Penguin.Web.Security</RootNamespace>
+    <DocumentationFile>Penguin.Web.Security.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Attributes\" />
