@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Penguin.Web.Security</name>
+    </assembly>
+    <members>
+        <member name="T:Penguin.Web.Security.Attributes.LoggedInAttribute">
+            <summary>
+            Requires an active logged in user session to access the controller action
+            </summary>
+        </member>
+        <member name="M:Penguin.Web.Security.Attributes.LoggedInAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Executes the action filter against the provided filter context
+            </summary>
+            <param name="filterContext">The filter context to execture against</param>
+        </member>
+        <member name="T:Penguin.Web.Security.Attributes.RequiresRoleAttribute">
+            <summary>
+            Used to denote that a Controller Action should require the session user to have any role matching the provided in order to access it
+            </summary>
+        </member>
+        <member name="P:Penguin.Web.Security.Attributes.RequiresRoleAttribute.AllowedRoles">
+            <summary>
+            The roles allowed by this attribute
+            </summary>
+        </member>
+        <member name="M:Penguin.Web.Security.Attributes.RequiresRoleAttribute.#ctor(System.String[])">
+            <summary>
+            Mark the Controller Action as only being accessible to users with any of the provided roles
+            </summary>
+            <param name="roleNames"></param>
+        </member>
+        <member name="M:Penguin.Web.Security.Attributes.RequiresRoleAttribute.Evaluate(Penguin.Security.Abstractions.Interfaces.IUserSession)">
+            <summary>
+            Evaluates the user session against the roles provided at construction
+            </summary>
+            <param name="userSession">The user session to evaluate</param>
+            <returns>The result of the evaluation</returns>
+        </member>
+        <member name="M:Penguin.Web.Security.Attributes.RequiresRoleAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Executes the action filter against the provided filter context
+            </summary>
+            <param name="filterContext">The filter context to execture against</param>
+        </member>
+        <member name="T:Penguin.Web.Security.Results.RequiresRoleResult">
+            <summary>
+            The results of checking permissions against the provided user session
+            </summary>
+        </member>
+        <member name="F:Penguin.Web.Security.Results.RequiresRoleResult.Login">
+            <summary>
+            There is no active user session
+            </summary>
+        </member>
+        <member name="F:Penguin.Web.Security.Results.RequiresRoleResult.Unauthorized">
+            <summary>
+            There is an active user session but the user does not have the required permissions
+            </summary>
+        </member>
+        <member name="F:Penguin.Web.Security.Results.RequiresRoleResult.Authorized">
+            <summary>
+            There is an active user session any the user has the required persmission
+            </summary>
+        </member>
+    </members>
+</doc>
