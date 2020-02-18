@@ -18,12 +18,12 @@ namespace Penguin.Web.Security.Attributes
     [SuppressMessage("Design", "CA1056:Uri properties should not be strings")]
     public sealed class RequiresRoleAttribute : ActionFilterAttribute, IActionFilter
     {
+        private const string NO_USER_SESSION = "IUserSession was not able to be resolved by the internal service provider";
+
         /// <summary>
         /// The roles allowed by this attribute
         /// </summary>
         public List<string> AllowedRoles { get; }
-
-        private const string NO_USER_SESSION = "IUserSession was not able to be resolved by the internal service provider";
 
         /// <summary>
         /// Mark the Controller Action as only being accessible to users with any of the provided roles
