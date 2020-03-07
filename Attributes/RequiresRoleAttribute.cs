@@ -92,7 +92,7 @@ namespace Penguin.Web.Security.Attributes
             }
             else if (evaluation == RequiresRoleResult.Unauthorized)
             {
-                throw new MissingRoleException(AllowedRoles.ToArray());
+                throw new MissingRoleException(this.AllowedRoles.ToArray());
             }
             else
             {
