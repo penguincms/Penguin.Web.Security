@@ -56,7 +56,7 @@ namespace Penguin.Web.Security.Attributes
             {
                 return RequiresRoleResult.Login;
             }
-            else if (!this.AllowedRoles.Any(r => loggedInUser.HasRole(r)) && !loggedInUser.HasRole(RoleNames.SysAdmin))
+            else if (!this.AllowedRoles.Any(r => loggedInUser.HasRole(r)) && !loggedInUser.HasRole(RoleNames.SYS_ADMIN))
             {
                 return RequiresRoleResult.Unauthorized;
             }
