@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageProjectUrl>https://github.com/penguincms/Penguin.Web.Security</PackageProjectUrl>
-    <Version>5.0.0</Version>
+    <Version>5.0.1</Version>
     <Description>Web attributes leveraging abstract security interfaces intended on being used to DI security providers into controllers</Description>
     <AssemblyName>Penguin.Web.Security</AssemblyName>
     <RootNamespace>Penguin.Web.Security</RootNamespace>
