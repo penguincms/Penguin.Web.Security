@@ -2,7 +2,7 @@
   <Import Project="Penguin.Projects.Shared\Penguin.Projects.Shared.csproj" />
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageProjectUrl>https://github.com/penguincms/Penguin.Web.Security</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/PenguinCMS/Penguin.Web.Security</PackageProjectUrl>
     <Version>5.0.5</Version>
     <Description>Web attributes leveraging abstract security interfaces intended on being used to DI security providers into controllers</Description>
     <AssemblyName>Penguin.Web.Security</AssemblyName>
@@ -11,7 +11,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Attributes\" />
-    <PackageReference Include="Penguin.Security.Abstractions" Version="5.0.4" />
+    <PackageReference Include="Penguin.Security.Abstractions" Version="5.0.6-TAHULSY" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
