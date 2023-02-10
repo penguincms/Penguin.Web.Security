@@ -21,7 +21,7 @@ namespace Penguin.Web.Security.Attributes
         /// <summary>
         /// The roles allowed by this attribute
         /// </summary>
-        public List<string> AllowedRoles { get; }
+        public IList<string> AllowedRoles { get; }
 
         /// <summary>
         /// Mark the Controller Action as only being accessible to users with any of the provided roles
