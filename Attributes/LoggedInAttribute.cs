@@ -10,22 +10,22 @@ namespace Penguin.Web.Security.Attributes
     /// Requires an active logged in user session to access the controller action
     /// </summary>
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class)]
-    public class LoggedInAttribute : ActionFilterAttribute, IActionFilter
+    public sealed class LoggedInAttribute : ActionFilterAttribute, IActionFilter
     {
         private const string NO_USER_SESSION = "IUserSession was not able to be resolved by the internal service provider";
 
         /// <summary>
         /// Executes the action filter against the provided filter context
         /// </summary>
-        /// <param name="filterContext">The filter context to execture against</param>
-        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        /// <param name="context">The filter context to execture against</param>
+        public override void OnActionExecuting(ActionExecutingContext context)
         {
-            if (filterContext is null)
+            if (context is null)
             {
-                throw new ArgumentNullException(nameof(filterContext));
+                throw new ArgumentNullException(nameof(context));
             }
 
-            IUserSession userSession = filterContext.HttpContext.RequestServices.GetService<IUserSession>();
+            IUserSession userSession = context.HttpContext.RequestServices.GetService<IUserSession>();
 
             if (userSession is null)
             {
@@ -37,7 +37,7 @@ namespace Penguin.Web.Security.Attributes
                 throw new NotLoggedInException();
             }
 
-            base.OnActionExecuting(filterContext);
+            base.OnActionExecuting(context);
         }
     }
 }

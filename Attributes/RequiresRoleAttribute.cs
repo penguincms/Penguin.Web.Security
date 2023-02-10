@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.DependencyInjection;
-using Penguin.Security.Abstractions.Constants;
 using Penguin.Security.Abstractions.Exceptions;
 using Penguin.Security.Abstractions.Extensions;
 using Penguin.Security.Abstractions.Interfaces;
@@ -8,6 +7,7 @@ using Penguin.Web.Security.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ConstantRoleNames = Penguin.Security.Abstractions.Constants.RoleNames;
 
 namespace Penguin.Web.Security.Attributes
 {
@@ -29,7 +29,7 @@ namespace Penguin.Web.Security.Attributes
         /// <param name="roleNames"></param>
         public RequiresRoleAttribute(params string[] roleNames)
         {
-            this.AllowedRoles = roleNames.ToList();
+            AllowedRoles = roleNames.ToList();
         }
 
         /// <summary>
@@ -50,39 +50,32 @@ namespace Penguin.Web.Security.Attributes
             {
                 return RequiresRoleResult.Authorized;
             }
-            if (userSession is null || !userSession.IsLoggedIn)
-            {
-                return RequiresRoleResult.Login;
-            }
-            else if (!this.AllowedRoles.Any(r => loggedInUser.HasRole(r)) && !loggedInUser.HasRole(RoleNames.SYS_ADMIN))
-            {
-                return RequiresRoleResult.Unauthorized;
-            }
-            else
-            {
-                return RequiresRoleResult.Authorized;
-            }
+            return userSession is null || !userSession.IsLoggedIn
+                ? RequiresRoleResult.Login
+                : !AllowedRoles.Any(loggedInUser.HasRole) && !loggedInUser.HasRole(ConstantRoleNames.SYS_ADMIN)
+                    ? RequiresRoleResult.Unauthorized
+                    : RequiresRoleResult.Authorized;
         }
 
         /// <summary>
         /// Executes the action filter against the provided filter context
         /// </summary>
-        /// <param name="filterContext">The filter context to execture against</param>
-        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        /// <param name="context">The filter context to execture against</param>
+        public override void OnActionExecuting(ActionExecutingContext context)
         {
-            if (filterContext is null)
+            if (context is null)
             {
-                throw new ArgumentNullException(nameof(filterContext));
+                throw new ArgumentNullException(nameof(context));
             }
 
-            IUserSession userSession = filterContext.HttpContext.RequestServices.GetService<IUserSession>();
+            IUserSession userSession = context.HttpContext.RequestServices.GetService<IUserSession>();
 
             if (userSession is null)
             {
                 throw new Exception(NO_USER_SESSION);
             }
 
-            RequiresRoleResult evaluation = this.Evaluate(userSession);
+            RequiresRoleResult evaluation = Evaluate(userSession);
 
             if (evaluation == RequiresRoleResult.Login)
             {
@@ -90,12 +83,14 @@ namespace Penguin.Web.Security.Attributes
             }
             else if (evaluation == RequiresRoleResult.Unauthorized)
             {
-                throw new MissingRoleException(this.AllowedRoles.ToArray());
+                throw new MissingRoleException(AllowedRoles.ToArray());
             }
             else
             {
-                base.OnActionExecuting(filterContext);
+                base.OnActionExecuting(context);
             }
         }
+
+        public string[] RoleNames { get; }
     }
 }
