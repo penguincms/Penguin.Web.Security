@@ -12,7 +12,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Attributes\" />
-    <PackageReference Include="Penguin.Security.Abstractions" Version="5.2.0" />
+    <PackageReference Include="Penguin.Security.Abstractions" Version="5.4.0" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
